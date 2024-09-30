@@ -20,16 +20,16 @@ public class UpdateBookCommand
             throw new InvalidOperationException("Kitap bulunamadı.");
         }
         book.GenreId = Model.GenreId != default ? Model.GenreId : book.GenreId;
-        book.PageCount = Model.PageCount != default ? Model.PageCount : book.PageCount;
+        // book.PageCount = Model.PageCount != default ? Model.PageCount : book.PageCount;
         book.Title = Model.Title != default ? Model.Title : book.Title;
-        book.PublishDate = Model.PublishDate != default ? Model.PublishDate : book.PublishDate;
+        // book.PublishDate = Model.PublishDate != default ? Model.PublishDate : book.PublishDate;
         _context.SaveChanges();
     }
 }
 public class UpdateBookModel
 {
     public string Title { get; set; }
-    public int PageCount { get; set; }
-    public DateTime PublishDate { get; set; }
+    // public int PageCount { get; set; }
+    // public DateTime PublishDate { get; set; }
     public int GenreId { get; set; }
 }
