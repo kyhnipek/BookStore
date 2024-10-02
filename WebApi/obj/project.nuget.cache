@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "GBlBpn85S7M=",
+  "dgSpecHash": "JSSlXE7qYZM=",
   "success": true,
   "projectFilePath": "/Users/kayhanipek/Documents/Projects/DotNet/pratikler/BookStore/WebApi/WebApi.csproj",
   "expectedPackageFiles": [
+    "/Users/kayhanipek/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
+    "/Users/kayhanipek/.nuget/packages/fluentvalidation/11.10.0/fluentvalidation.11.10.0.nupkg.sha512",
     "/Users/kayhanipek/.nuget/packages/microsoft.entityframeworkcore/8.0.8/microsoft.entityframeworkcore.8.0.8.nupkg.sha512",
     "/Users/kayhanipek/.nuget/packages/microsoft.entityframeworkcore.abstractions/8.0.8/microsoft.entityframeworkcore.abstractions.8.0.8.nupkg.sha512",
     "/Users/kayhanipek/.nuget/packages/microsoft.entityframeworkcore.analyzers/8.0.8/microsoft.entityframeworkcore.analyzers.8.0.8.nupkg.sha512",

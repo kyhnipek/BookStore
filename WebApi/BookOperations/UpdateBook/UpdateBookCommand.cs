@@ -1,3 +1,4 @@
+using AutoMapper;
 using WebApi.DbOperations;
 
 namespace WebApi.BookOperations.UpdateBook;
@@ -5,12 +6,14 @@ namespace WebApi.BookOperations.UpdateBook;
 public class UpdateBookCommand
 {
     public UpdateBookModel Model { get; set; }
+    public IMapper _mapper;
     public int Id { get; set; }
     private readonly BookStoreDbContext _context;
 
-    public UpdateBookCommand(BookStoreDbContext context)
+    public UpdateBookCommand(BookStoreDbContext context, IMapper mapper)
     {
         _context = context;
+        _mapper = mapper;
     }
     public void Handle()
     {
@@ -19,10 +22,11 @@ public class UpdateBookCommand
         {
             throw new InvalidOperationException("Kitap bulunamadı.");
         }
-        book.GenreId = Model.GenreId != default ? Model.GenreId : book.GenreId;
-        // book.PageCount = Model.PageCount != default ? Model.PageCount : book.PageCount;
-        book.Title = Model.Title != default ? Model.Title : book.Title;
-        // book.PublishDate = Model.PublishDate != default ? Model.PublishDate : book.PublishDate;
+        _mapper.Map<UpdateBookModel, Book>(Model, book);
+        // book.GenreId = Model.GenreId != default ? Model.GenreId : book.GenreId;
+        // // book.PageCount = Model.PageCount != default ? Model.PageCount : book.PageCount;
+        // book.Title = Model.Title != default ? Model.Title : book.Title;
+        // // book.PublishDate = Model.PublishDate != default ? Model.PublishDate : book.PublishDate;
         _context.SaveChanges();
     }
 }
