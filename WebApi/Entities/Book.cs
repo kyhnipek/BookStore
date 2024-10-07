@@ -12,4 +12,7 @@ public class Book
     public Genre Genre { get; set; }
     public int PageCount { get; set; }
     public DateTime PublishDate { get; set; }
+    public int AuthorId { get; set; }
+    public Author Author { get; set; }
+
 }

@@ -23,8 +23,9 @@ public class UpdateGenreCommand
             throw new InvalidOperationException("Kitap türü bulunamadı.");
         if (_context.Genres.Any(x => x.Name.ToLower() == Model.Name.ToLower() && x.Id != GenreId))
             throw new InvalidOperationException("Kitap türü zaten mevcut");
-        genre.Name = string.IsNullOrEmpty(Model.Name.ToLower()) ? genre.Name : Model.Name;
-        genre.IsActive = Model.IsActive;
+        // genre.Name = string.IsNullOrEmpty(Model.Name.ToLower()) ? genre.Name : Model.Name;
+        // genre.IsActive = Model.IsActive;
+        _mapper.Map<UpdateGenreModel, Genre>(Model, genre);
         _context.SaveChanges();
     }
 }
