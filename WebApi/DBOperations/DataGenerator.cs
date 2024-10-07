@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using WebApi.Entities;
 
 namespace WebApi.DbOperations;
 
@@ -12,6 +13,19 @@ public class DataGenerator
             {
                 return;
             }
+            context.AddRange(
+                new Genre
+                {
+                    Name = "Personal Growth",
+                },
+                new Genre
+                {
+                    Name = "Science Fiction",
+                },
+                new Genre
+                {
+                    Name = "Romance",
+                });
             context.Books.AddRange(
 
                         new Book

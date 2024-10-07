@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace WebApi.BookOperations.UpdateBook;
+namespace WebApi.Application.BookOperations.Commands.UpdateBook;
 
 public class UpdateBookCommandValidator : AbstractValidator<UpdateBookCommand>
 {
@@ -8,6 +8,6 @@ public class UpdateBookCommandValidator : AbstractValidator<UpdateBookCommand>
     {
         RuleFor(command => command.Id).GreaterThan(0);
         RuleFor(command => command.Model.GenreId).GreaterThan(0);
-        RuleFor(command => command.Model.Title).NotEmpty().MinimumLength(4);
+        RuleFor(command => command.Model.Title).MinimumLength(4).When(command => command.Model.Title.Trim() != string.Empty);
     }
 }
