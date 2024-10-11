@@ -2,7 +2,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApi.Common;
-using WebApi.DbOperations;
+using WebApi.DBOperations;
 using WebApi.Entities;
 
 namespace WebApi.Application.BookOperations.Queries.GetBooks;
@@ -10,9 +10,9 @@ namespace WebApi.Application.BookOperations.Queries.GetBooks;
 
 public class GetBooksQuery
 {
-    private readonly BookStoreDbContext _dbContext;
+    private readonly IBookStoreDbContext _dbContext;
     private readonly IMapper _mapper;
-    public GetBooksQuery(BookStoreDbContext dbContext, IMapper mapper)
+    public GetBooksQuery(IBookStoreDbContext dbContext, IMapper mapper)
     {
         _dbContext = dbContext;
         _mapper = mapper;

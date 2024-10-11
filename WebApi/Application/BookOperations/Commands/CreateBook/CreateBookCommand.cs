@@ -1,5 +1,5 @@
 using AutoMapper;
-using WebApi.DbOperations;
+using WebApi.DBOperations;
 using WebApi.Entities;
 
 namespace WebApi.Application.BookOperations.Commands.CreateBook;
@@ -7,10 +7,10 @@ namespace WebApi.Application.BookOperations.Commands.CreateBook;
 public class CreateBookCommand
 {
     public CreateBookModel Model { get; set; }
-    public readonly BookStoreDbContext _dbContext;
+    public readonly IBookStoreDbContext _dbContext;
     private readonly IMapper _mapper;
 
-    public CreateBookCommand(BookStoreDbContext dbContext, IMapper mapper)
+    public CreateBookCommand(IBookStoreDbContext dbContext, IMapper mapper)
     {
         _dbContext = dbContext;
         _mapper = mapper;
@@ -38,4 +38,5 @@ public class CreateBookModel
     public int PageCount { get; set; }
     public DateTime PublishDate { get; set; }
     public int GenreId { get; set; }
+    public int AuthorId { get; set; }
 }

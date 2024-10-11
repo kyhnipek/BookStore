@@ -1,5 +1,5 @@
 using AutoMapper;
-using WebApi.DbOperations;
+using WebApi.DBOperations;
 using WebApi.Entities;
 
 namespace WebApi.Application.BookOperations.Commands.UpdateBook;
@@ -9,9 +9,9 @@ public class UpdateBookCommand
     public UpdateBookModel Model { get; set; }
     public IMapper _mapper;
     public int Id { get; set; }
-    private readonly BookStoreDbContext _context;
+    private readonly IBookStoreDbContext _context;
 
-    public UpdateBookCommand(BookStoreDbContext context, IMapper mapper)
+    public UpdateBookCommand(IBookStoreDbContext context, IMapper mapper)
     {
         _context = context;
         _mapper = mapper;

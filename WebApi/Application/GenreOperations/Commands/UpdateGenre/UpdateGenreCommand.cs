@@ -1,5 +1,5 @@
 using AutoMapper;
-using WebApi.DbOperations;
+using WebApi.DBOperations;
 using WebApi.Entities;
 
 namespace WebApi.Application.GenreOperations.Commands.UpdateGenre;
@@ -7,11 +7,11 @@ namespace WebApi.Application.GenreOperations.Commands.UpdateGenre;
 public class UpdateGenreCommand
 {
     public int GenreId { get; set; }
-    private readonly BookStoreDbContext _context;
+    private readonly IBookStoreDbContext _context;
     public readonly IMapper _mapper;
     public UpdateGenreModel Model { get; set; }
 
-    public UpdateGenreCommand(BookStoreDbContext context, IMapper mapper)
+    public UpdateGenreCommand(IBookStoreDbContext context, IMapper mapper)
     {
         _context = context;
         _mapper = mapper;
