@@ -37,3 +37,11 @@
 /Users/kayhanipek/Documents/Projects/DotNet/pratikler/BookStore/WebApi/obj/Debug/net8.0/WebApi.pdb
 /Users/kayhanipek/Documents/Projects/DotNet/pratikler/BookStore/WebApi/obj/Debug/net8.0/WebApi.genruntimeconfig.cache
 /Users/kayhanipek/Documents/Projects/DotNet/pratikler/BookStore/WebApi/obj/Debug/net8.0/ref/WebApi.dll
+/Users/kayhanipek/Documents/Projects/DotNet/pratikler/BookStore/WebApi/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/kayhanipek/Documents/Projects/DotNet/pratikler/BookStore/WebApi/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/kayhanipek/Documents/Projects/DotNet/pratikler/BookStore/WebApi/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/kayhanipek/Documents/Projects/DotNet/pratikler/BookStore/WebApi/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/Users/kayhanipek/Documents/Projects/DotNet/pratikler/BookStore/WebApi/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/Users/kayhanipek/Documents/Projects/DotNet/pratikler/BookStore/WebApi/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/kayhanipek/Documents/Projects/DotNet/pratikler/BookStore/WebApi/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/Users/kayhanipek/Documents/Projects/DotNet/pratikler/BookStore/WebApi/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll

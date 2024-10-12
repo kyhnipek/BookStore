@@ -13,6 +13,7 @@ public class BookStoreDbContext : DbContext, IBookStoreDbContext
     public DbSet<Book> Books { get; set; }
     public DbSet<Genre> Genres { get; set; }
     public DbSet<Author> Authors { get; set; }
+    public DbSet<User> Users { get; set; }
 
     public override EntityEntry<TEntity> Add<TEntity>(TEntity entity) where TEntity : class
     {

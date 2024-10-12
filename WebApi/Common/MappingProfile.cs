@@ -11,6 +11,7 @@ using WebApi.Application.AuthorOperations.Queries.GetAuthors;
 using WebApi.Application.AuthorOperations.Queries.GetAuthorDetail;
 using WebApi.Application.AuthorOperations.Commands.CreateAuthor;
 using WebApi.Application.AuthorOperations.Commands.UpdateAuthor;
+using WebApi.Application.UserOperations.Commands.CreateUser;
 
 namespace WebApi.Common;
 
@@ -29,5 +30,6 @@ public class MappingProfile : Profile
         CreateMap<Author, AuthorDetailViewModel>().ForMember(dest => dest.Birthday, opt => opt.MapFrom(src => src.Birthday.Date.ToString("dd/MM/yyyy")));
         CreateMap<CreateAuthorModel, Author>();
         CreateMap<UpdateAuthorModel, Author>().ForAllMembers(opts => opts.Condition((src, dest, srcMember) => srcMember != string.Empty));
+        CreateMap<CreateUserModel, User>();
     }
 }

@@ -7,9 +7,11 @@ using WebApi.Application.AuthorOperations.Commands.CreateAuthor;
 using WebApi.Application.AuthorOperations.Commands.UpdateAuthor;
 using WebApi.Application.AuthorOperations.Commands.DeleteAuthor;
 using WebApi.DBOperations;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebApi.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("[controller]s")]
 public class AuthorController : ControllerBase
